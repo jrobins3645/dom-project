@@ -1,0 +1,335 @@
+/* --Universal properties-- */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 0px;
+  background-color: #daf9ff;
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0px;
+  margin: 0;
+}
+h1,
+h2 {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+img {
+  width: 100%;
+}
+p {
+  font-weight: bold;
+  text-align: center;
+}
+li {
+  list-style: none;
+}
+hr {
+  border: 1px dashed gray;
+  width: 90%;
+}
+
+/* --Header/Navlist-- */
+ul {
+  list-style: none;
+  padding: 0px;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 80px;
+  width: 80px;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+}
+.nav-link {
+  margin: 5px;
+  padding: 10px;
+  font-size: 24px;
+  line-height: 0px;
+  text-align: center;
+  border: 4px solid #dddaff;
+  background-color: #daffe0;
+  border-radius: 6px;
+}
+
+/* -- To Top Button -- */
+.to-top-section {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+}
+.to-top-button {
+  display: flex;
+  height: 30px;
+  background-color: #daffe0;
+  border: 4px solid plum;
+  border-radius: 10px;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --Cart image and counter--*/
+.cart-section {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+.cart-icon {
+  margin: 5px;
+  height: 60px;
+  width: 60px;
+}
+.cart-counter {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  background-color: coral;
+  border: 4px solid plum;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* --Ticket Section-- */
+.tickets-section,
+.goods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tickets-section {
+  flex-wrap: wrap;
+}
+.ticket-container {
+  display: flex;
+  border: 2px dashed black;
+  padding: 4px;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  width: 312px;
+  height: 450px;
+  text-align: center;
+  justify-content: space-between;
+}
+.ticket-images {
+  width: 100%;
+}
+.low-ticket,
+.med-ticket,
+.high-ticket {
+  width: 300px;
+  height: 300px;
+  border: 6px solid #dddaff;
+}
+.low-ticket {
+  background-color: coral;
+}
+.med-ticket {
+  background-color: #dbdbdc;
+}
+.high-ticket {
+  background-color: #e7d27c;
+}
+
+/* --The products and their containers-- */
+.goods-container {
+  width: 200px;
+  height: 200px;
+  border: 6px solid #dddaff;
+}
+.goods {
+  flex-direction: column;
+}
+.list-item {
+  border: dashed 2px gray;
+  padding: 2px;
+  margin: 15px;
+  width: 212px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* -- Margin on the bottom of the collectables section -- */
+.collectables-section {
+  margin-bottom: 64px;
+}
+
+/* -- Cart-form stuff -- */
+form {
+  display: flex;
+  justify-content: space-evenly;
+}
+input {
+  width: 15%;
+}
+
+/* --The product lists-- */
+.clothing-list,
+.collectables-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* --The intiial checkout pop-up-- */
+.cart-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.cart-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+  border-radius: 10px;
+  background-color: #daffe0;
+  position: relative;
+}
+.cart-list,
+.credit-form,
+.cash-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+.cart-list,
+.checkout-cash-screen,
+.checkout-credit-screen {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart-li {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 4px;
+}
+.close-me {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  top: 4px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 50%;
+  /* other radius suggestion might be 10px to match the 10px radius of the cart-box? */
+  padding: 4px;
+}
+.checkout-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.cart-pic {
+  width: 50px;
+  max-height: 50px;
+}
+.pic-qty-div,
+.list-name-p,
+.list-price-p {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.pic-qty-div {
+  justify-content: flex-start;
+}
+.list-name-p {
+  justify-content: center;
+}
+.list-price-p {
+  justify-content: flex-end;
+}
+
+/* -- Payment Screens -- */
+.cash-form,
+.credit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cash-label,
+.credit-number-label,
+.credit-date-label,
+.credit-cvv-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.checkout-credit-screen,
+.checkout-cash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  height: 80%;
+}
+#cash-provided-id {
+  width: 100px;
+}
+#credit-number-id {
+  width: 140px;
+}
+#credit-date-id {
+  width: 160px;
+}
+#credit-cvv-id {
+  width: 40px;
+}
+
+/* -- HIDE & INVISIBILITY -- */
+.hide {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+}
+

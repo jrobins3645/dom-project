@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+    </style>
+    <title>P.O.S. Application</title>
+  </head>
+  <body>
+    <header class="nav-header">
+      <a href="#">
+      <img src="assets/logo.png" alt="Rick"s Rides Logo" class="logo"></img>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#tickets" class="nav-link">Tickets</a></li>
+          <li><a href="#clothes" class="nav-link">Clothes</a></li>
+          <li><a href="#collectables" class="nav-link">Collectables</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="to-top-section">
+        <div class='to-top-button'>Scroll to Top</div>
+      </section>
+      <section class="cart-section">
+        <img src="assets/cart-icon.png" alt="Shopping cart icon" class="cart-icon">
+        <div class="cart-counter"></div>
+      </section>
+      <h1>Rick's Radical Rides</h1>
+      <h2 id="tickets">Tickets</h2>
+      <section class="tickets-section">
+        <div class="ticket-container">
+            <div class="goods low-ticket">
+              <img src="Assets/ticket1.png" alt="General admission">
+          </div>
+          <h3>General Admission $40.00</h3>
+          <p>Ride all the sissy rides and pay out of pocket for all carnival games.</p>
+        </div>
+        <div class="ticket-container">
+          <div class="goods med-ticket">
+            <img src="Assets/ticket2.png" alt="Medium ticket">
+          </div>
+          <h3>Medium Admission $100.00</h3>
+          <p>Best seller! ride all rides and play all carnival games two times  a piece!</p>
+        </div>
+        <div class="ticket-container">
+          <div class="goods high-ticket">
+              <img src="Assets/ticket3.png" alt="Golden Ticket">
+          </div>
+          <h3>Grande Admission $999</h3>
+          <p>UNLIMITED RIDES! UNLIMITED GAMES! Dine with the finest of the fine and drink until your dead! Explore where no one has gone before!</p>
+        </div>
+      </section>
+      <section class="clothes-section" id="clothes">
+        <h2>Clothes</h2>
+        <ul class="clothing-list"></ul>
+      </section>
+      <section class="collectables-section" id="collectables">
+        <h2>Collectables</h2>
+        <ul class="collectables-list"></ul>
+      </section>
+      <div class="cart-container hide">
+        <div class="cart-box">
+          <p class="close-me">X</p>
+          <ul class="cart-list"></ul>
+          <div class="checkout-buttons">
+            <button class="checkout-credit-button">Checkout Credit</button>
+            <button class="checkout-cash-button">Checkout Cash</button>
+          </div>
+          <div class="checkout-cash-screen hide">
+            <form class="cash-form">
+              <p class="total-due-p">Total Due: $</p>
+              <label for="cash-provided" class="cash-label">
+                Cash Provided
+                <input type="number" min="0" step="0.01" name="cash-provided" id="cash-provided-id" value="0" required />
+              </label>
+              <button>Pay Now</button>
+            </form>
+            <div class='not-enough invisible'>Not Enough!</div>
+          </div>
+          <div class="checkout-credit-screen hide">
+            <form class="credit-form">
+              <p class="total-due-p">Total Due: $</p>
+              <label for="credit-number" min="0" class="credit-number-label">
+                Credit Card Number
+                <input type="tel" inputmode="numeric" minlength="16" maxlength="19" name="credit-number" min="0" id="credit-number-id" required />
+              </label>
+              <label for="credit-date" class="credit-date-label">
+                Credit Card Expiration Date
+                <input type="month" name="credit-date" id="credit-date-id" />
+              </label>
+              <label for="credit-cvv" class="credit-cvv-label">
+                CVV
+                <input type="number" min="0" minlength="3" maxlength="3" name="credit-cvv" id="credit-cvv-id" class="credit-cvv" required />
+              </label>
+              <button>Pay Now</button>
+              <div class="expired invisible">Your credit card is expired!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
